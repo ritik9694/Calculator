@@ -1,38 +1,64 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  h1 {
+    color: rgb(29, 111, 146);
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  .container {
+    width: 250px;
+    height: 350px;
+    border: 5px solid #e22175cf;
+    border-radius: 37px;
+    margin-top: 220px;
+    background-color: #111;
+    padding: 20px;
 }
+  h1 {
+    position: absolute;
+    top: 0px;
+  }
+  
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+  }
+  
+  input[type="text"] {
+    width: 250px;
+    height: 60px;
+    border-radius: 5px;
+    background: #444;
+    color: #fff;
+    border: none;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  #clear {
+    grid-column: 1/3;
+  }
+  
+  #equal {
+    grid-column: 3/5;
+  }
+  
+  button {
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #777;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .highlight {
+    background-color: aqua;
+  }
